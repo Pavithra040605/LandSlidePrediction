@@ -1,1 +1,2 @@
-WEEK 1 #LandSlidePrediction
+LandSlidePrediction
+Week 1
