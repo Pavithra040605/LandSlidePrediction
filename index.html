@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🌋 Landslide Prediction 🌋</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="form-container">
+        <form action="/predict" method="post">
+            <h2>🌋Landslide Prediction📊</h2>
+            <div class="form-grid">
+                <div><label>Aspect:</label><input type="number" name="Aspect" step="any" required></div>
+                <div><label>Curvature:</label><input type="number" name="Curvature" step="any" required></div>
+                <div><label>Earthquake:</label><input type="number" name="Earthquake" step="any" required></div>
+                <div><label>Elevation:</label><input type="number" name="Elevation" step="any" required></div>
+                <div><label>Flow:</label><input type="number" name="Flow" step="any" required></div>
+                <div><label>Lithology:</label><input type="number" name="Lithology" step="any" required></div>
+                <div><label>NDVI:</label><input type="number" name="NDVI" step="any" required></div>
+                <div><label>NDWI:</label><input type="number" name="NDWI" step="any" required></div>
+                <div><label>Plan:</label><input type="number" name="Plan" step="any" required></div>
+                <div><label>Precipitation:</label><input type="number" name="Precipitation" step="any" required></div>
+                <div><label>Profile:</label><input type="number" name="Profile" step="any" required></div>
+                <div><label>Slope:</label><input type="number" name="Slope" step="any" required></div>
+            </div>
+            <input type="submit" value="Predict">
+            {% if rf_result and dt_result %}
+            <div class="prediction">
+                <p>🌲Random Forest Prediction: {{ rf_result }}</p>
+                <p>🌳Decision Tree Prediction: {{ dt_result }}</p>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>
