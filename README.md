@@ -1,5 +1,6 @@
-LandSlidePrediction
+AICTE INTERNSHIP(2025) -- Climate Risk & Disaster Management
 
+LandSlidePrediction 
 
 
 PROBLEM STATEMENT :
